@@ -1,4 +1,4 @@
-FROM node:7
+FROM node:10
 RUN mkdir /practice_docker
 ADD . /practice_docker
 WORKDIR /practice_docker

@@ -1,14 +1,14 @@
-version: "2"
+version: "3"
 services:
   practice_docker: 
-    image: anant00729/practice_docker
+    build: .
     ports: 
       - 80:3000
     command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; npm start'
     depends_on:
       - db
     environment:
-      - DATABASE_URL=postgres://postgres:password@db:5432/practicedocker
+      - DATABASE_URL=postgres://postgres:password@localhost:5432/practicedocker
       - PORT=3000   
   db:
     image: postgres
@@ -16,3 +16,11 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
       - POSTGRES_DB=practicedocker
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - 5454:5454/tcp
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@mydomain.com
+      - PGADMIN_DEFAULT_PASSWORD=postgres
+      - PGADMIN_LISTEN_PORT=5454    
