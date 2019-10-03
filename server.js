@@ -1,6 +1,7 @@
 const express = require('express');
-const server = express();
-const PORT = 3000;
+const path = require('path');
+const app = express();
+const PORT = 5000;
 //const pg = require('pg');
 const { Pool, Client } = require('pg')
 
@@ -34,6 +35,11 @@ _c.connect()
 
 
 
+app.use(express.static('client/build'))
 
-server.get('/', (req, res) => res.status(200).send('hello'));
-server.listen(PORT, () => console.log(`Server running on bb ${PORT}`));
+app.get('*', (req,res)=> {
+    res.sendFile(path.resolve(__dirname , 'client', 'build', 'index.html'))
+})
+
+// app.get('/', (req, res) => res.status(200).send('hello'));
+app.listen(PORT, () => console.log(`Server running on bb ${PORT}`));

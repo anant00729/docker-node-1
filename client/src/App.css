@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.app-logo-center::before {
+  content: "";
+  position: fixed;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+
+}
+
+.app-logo-center{
+  background: white;
+  width: 12;
+  height: 12;
+  margin-bottom: 20px;
+  margin-top: -26px;
+  color: black;
+}
+
+
+.app-logo-center-close{
+  background: white;
+  width: 52px;
+  height: 52px;
+  
+  color: black;
+}
+
+/* .app-logo-center-close::before {
+  content: "";
+  position: fixed;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
+  z-index: 100;
+} */
+
+.menu-transparent{
+  background-color: rgba(255, 255, 255, 1);
+  
+}
+
+.app-line{
+  height: 0.03rem;
+}
+
+
+
+
+.app-trans{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.hor-list::-webkit-scrollbar { 
+  width: 4px;
+  height: 3px;
+}
+
+.app-line-height{
+  height: 1px;
+}
+
+
+.hor-list::-webkit-scrollbar-thumb{
+  background: linear-gradient(to right,#da1b60,#ff8a00);
+  border-radius: 10px;
+}
+
+
+.hor-list::-webkit-scrollbar-track{
+  background: linear-gradient(to right,#201c29,#201c29 1px,#17141d 1px,#17141d);
+}
+
+.hor-list-nobar::-webkit-scrollbar{
+  display: none;
+}
+
+.adet-por-img{
+  height: 24rem;
+}
+
+.header-anim{
+  transform: translateY(-100%);
+  transition: transform 3000ms ease;
+}
+
+.header-anim1{
+  transform: translateY(100%);
+  transition: transform 3000ms ease;
+}
+
+.insta-overlay{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.copy-right-text{
+  font-size: 0.8rem;
+}
+
+
+.search-btn-text{
+  font-size: 1rem;
+}
+
+
+.search-text{
+  color: #FD9205;
+  
+}
+
+
+.close-boder {
+  border-color: #100D52;
+}
+
+
+.home-menu-login-text{
+  font-size: 12px;
+}
+
+
+
+
+.app-font{
+  font-family: 'Raleway', cursive;
+}
+
+
+.app-font-top{
+  font-family: 'Raleway', cursive;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+
+.dark-blue{
+  background-color: #100D52;
+  
+}
+
+
+.dark-blue-border{
+  border-color: #100D52;
+  
+}
+
+
+.dark-blue-text{
+  color: #100D52;
+}
+
+.app-share{
+  margin-top: -10px;
+}
+
+
+/* .vid-height{
+  width: 75%;
+  height: 590px;
+  object-fit: cover;
+} */
+
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  .vid-height{
+    width: 75%;
+    height: 590px;
+    object-fit: cover;
+  }
+
+  .app-main-bg{
+    background-color: #fbd77c;
+    height: 700px;
+  }
+  
+  
+}
+
+
+.rounded-community{
+  border-radius: .7rem;
+}
