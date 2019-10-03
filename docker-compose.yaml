@@ -24,3 +24,5 @@ services:
       - PGADMIN_DEFAULT_EMAIL=admin@mydomain.com
       - PGADMIN_DEFAULT_PASSWORD=postgres
       - PGADMIN_LISTEN_PORT=5454    
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data      
