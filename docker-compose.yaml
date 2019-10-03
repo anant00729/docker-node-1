@@ -12,12 +12,13 @@ services:
       - PORT=3000   
   db:
     image: postgres
+    restart: always
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
       - POSTGRES_DB=practicedocker
     volumes:
-      - ./data/postgres:/var/lib/postgresql/data            
+      - pgdata:/var/lib/postgresql/data
   pgadmin:
     image: dpage/pgadmin4
     ports:
@@ -25,5 +26,7 @@ services:
     environment:
       - PGADMIN_DEFAULT_EMAIL=admin@mydomain.com
       - PGADMIN_DEFAULT_PASSWORD=postgres
-      - PGADMIN_LISTEN_PORT=5454    
+      - PGADMIN_LISTEN_PORT=5454  
+volumes: 
+  pgdata:        
     
