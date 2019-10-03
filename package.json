@@ -5,12 +5,17 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "post-build" : "NPM CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "post-build": "NPM CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "debugg": "nodemon --inspect server.js",
+    "b_debugg": "nodemon --inspect-brk server.js",
+    "build": "tsc -b"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
+    "nodemon": "^1.19.3",
     "pg": "^7.12.1"
   }
 }
