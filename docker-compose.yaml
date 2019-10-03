@@ -16,6 +16,8 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
       - POSTGRES_DB=practicedocker
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data            
   pgadmin:
     image: dpage/pgadmin4
     ports:
@@ -24,5 +26,4 @@ services:
       - PGADMIN_DEFAULT_EMAIL=admin@mydomain.com
       - PGADMIN_DEFAULT_PASSWORD=postgres
       - PGADMIN_LISTEN_PORT=5454    
-    volumes:
-      - ./data/postgres:/var/lib/postgresql/data      
+    
